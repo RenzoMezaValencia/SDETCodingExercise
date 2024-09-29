@@ -23,6 +23,31 @@ public class BasePage {
 
     //Here you can set the Browser you need
     static{
+        String browser="Chrome";
+        switch (browser) {
+            case "FireFox":
+                {
+                    WebDriverManager.firefoxdriver().setup();
+                    driver = new FirefoxDriver();
+                
+                };
+                break;
+            case "Chrome":
+                {
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver();
+                };
+                break;
+            case "Edge":        
+                {
+                    WebDriverManager.edgedriver().setup();
+                    driver = new EdgeDriver();
+                };
+                break;
+
+            default:
+                break;
+        }
         //FireFox
         //WebDriverManager.firefoxdriver().setup();
         //driver = new FirefoxDriver();
@@ -32,8 +57,8 @@ public class BasePage {
         //driver = new ChromeDriver();
 
         //Edge
-        WebDriverManager.edgedriver().setup();
-        driver = new EdgeDriver();
+        //WebDriverManager.edgedriver().setup();
+        //driver = new EdgeDriver();
     }
 
     public BasePage(WebDriver driver){

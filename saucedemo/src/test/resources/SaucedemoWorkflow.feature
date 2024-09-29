@@ -3,7 +3,7 @@ Feature: Workflow Validation
 
     Background:
         Given I navigate to www.saucedemo.com
-        When I enter "standard_user" and password
+        When I enter "error_user" and password
 @Test_3
     Scenario Outline: Test case 3 - Happy Path Workflow
         When I add product <product> to the cart
